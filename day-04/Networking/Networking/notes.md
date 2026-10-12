@@ -1,5 +1,4 @@
-🌐 Networking Theory Files (day-04/networking/)
-
+🌐 Networking Theory Files 
 1. ip-addresses.md: IPv4 structure, octets, subnetting basics, and loopback addressing.
 
 2. ports.md: Well-known ports (22, 53, 80, 443, 3389) and port state management.
