@@ -1,4 +1,4 @@
-# Day 6 Capstone Project — Local Web Request Investigation Lab
+# Day 6 Capstone Project - Local Web Request Investigation Lab
 
 ## 1. Project Overview
 This project establishes a complete local web environment to investigate the relationship between clients, servers, HTTP requests, responses, HTML/CSS rendering, and automated script interaction. Built entirely offline without commercial hosting, it serves as a reproducible sandbox for web fundamentals and security analysis.
