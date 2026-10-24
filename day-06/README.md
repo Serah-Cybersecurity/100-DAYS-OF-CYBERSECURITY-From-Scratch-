@@ -25,7 +25,3 @@ This project establishes a complete local web environment to investigate the rel
 3. **Server (Python `http.server`):** Receives the request, parses the URI path, reads requested files (`index.html`, `style.css`) from disk, and returns HTTP responses with appropriate status codes (`200 OK`, `404 Not Found`).
 4. **Rendering / Parsing:** The browser parses HTML DOM elements and applies CSS presentation rules to render the user interface.
 
-## 5. How to Reproduce This Project
-1. Clone the repository and navigate to the Day 6 HTML directory:
-   ```bash
-   cd cybersecurity-journey/day-06/html/
