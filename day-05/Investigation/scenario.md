@@ -1,10 +1,11 @@
 # Incident Investigation Scenario: Suspicious Host Telemetry
 
 ## 1. Background
-On 2026-10-13, a SOC tier-1 alert flagged anomalous network outbound connectivity from a training endpoint. 
+An analyst receives an alert that a training computer has been communicating with an unfamiliar destination.
 
 ## 2. Objective
-Analyze a synthetic 10-record JSON telemetry log to identify network patterns, distinguish facts from hypotheses, and state what conclusions can and cannot be drawn from the evidence.
+Analyze a synthetic 10-record JSON network event log (`sample_events.json`) to summarize telemetry data, distinguish raw facts from hypotheses, and identify next steps for investigation.
 
-## 3. Assigned Dataset
-`day-05/python/sample_events.json`
+## 3. Data Reference
+- **Dataset:** `day-05/python/sample_events.json`
+- **Total Records:** 10 (7 valid events, 3 malformed/rejected records).
