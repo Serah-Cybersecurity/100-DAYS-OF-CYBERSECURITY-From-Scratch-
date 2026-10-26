@@ -7,13 +7,19 @@ def inspect_website():
     try:
         with urlopen(URL, timeout=5) as response:
             print("Request completed successfully.")
+            print("Requested URL:", response.geturl())
             print("Status code:", response.status)
             print("Content type:", response.headers.get("Content-Type"))
             print("Server header:", response.headers.get("Server"))
 
-            content = response.read(500)
+            # Read the full content to calculate total byte length
+            full_content = response.read()
+            body_length = len(full_content)
+            print("Response body length (bytes):", body_length)
+
+            # Print the first 500 bytes preview
             print("\nFirst 500 bytes of response body:")
-            print(content.decode("utf-8", errors="replace"))
+            print(full_content[:500].decode("utf-8", errors="replace"))
 
     except HTTPError as error:
         print("HTTP error occurred:", error.code)
