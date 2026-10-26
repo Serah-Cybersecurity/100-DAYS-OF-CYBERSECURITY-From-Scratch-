@@ -19,6 +19,14 @@ The **Python Security Log Analyzer** is a robust, beginner-friendly command-line
 The project utilizes fictional training datasets stored in `day-07/data/`. These records simulate standard authentication and system access logs for educational analysis.
 
 ## How to Run
-To execute the primary security log analyzer from the `day-07` directory, run:
+~To run the automated unit test suite:
+
+`python -m unittest discover -s tests -v`
+
+
+~To execute the primary security log analyzer from the `day-07` directory, run:
 ```powershell
 python .\python\security_log_analyzer.py
+
+
+
