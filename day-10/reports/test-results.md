@@ -4,12 +4,12 @@
 * **Script Name:** `linux_triage.sh`
 * **Purpose:** Collect a read-only, point-in-time system health and configuration snapshot for defensive analysis.
 * **Operational Scope:** Local Parrot OS virtual machine environment.
-* **Classification:** Beginner defensive utility (not a forensic memory acquisition tool or automated malware detector).
+* **Classification:** Beginner defensive utility (not a forensic memory acquisition tool or automated malware verdict generator).
 
 ## 2. Testing Methodology & Execution Log
 * **Permission Validation:** Executed successfully under unprivileged user permissions (`user`), respecting system access boundaries.
 * **Execution Command:** `./day-10/scripts/linux_triage.sh`
-* **Output Redirection:** Verified terminal output stream and tested file redirection (`> day-10/reports/test-results.md`).
+* **Output Redirection:** Verified terminal output stream and tested file redirection (`./day-10/scripts/linux_triage.sh > day-10/reports/test-results.md`).
 
 ## 3. Key Design Observations & Security Principles
 * **Defensive Error Handling:** Utilized `command -v` conditional wrappers to ensure the script degrades gracefully if optional binaries are missing.
