@@ -1,4 +1,4 @@
-# Day 10 — Linux Process and Service Triage
+# Day 10 - Linux Process and Service Triage
 
 ## Overview
 This project documents a beginner defensive-security exercise focused on inspecting Linux processes, running services, scheduled-task mechanisms, and listening TCP sockets within a simulated virtual machine environment.
@@ -38,7 +38,7 @@ day-10/
     ├── 02-top-process-monitoring.png
     ├── ...
     └── 15-triage-script-testing-and-chmod.png
-
+```
 
    ## What I Built
 The linux_triage.sh script collects a limited, point-in-time system health snapshot to guide human investigation.
