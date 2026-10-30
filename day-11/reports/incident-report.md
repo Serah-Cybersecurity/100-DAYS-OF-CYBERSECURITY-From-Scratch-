@@ -1,4 +1,4 @@
-# Day 11 — Incident Triage Report: Simulated Authentication & Persistence Investigation
+# Day 11 - Incident Triage Report: Simulated Authentication & Persistence Investigation
 
 ## 1. Executive Summary
 * **Incident ID:** INC-2026-1029-01
