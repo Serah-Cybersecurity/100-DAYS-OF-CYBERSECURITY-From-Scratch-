@@ -1,16 +1,13 @@
-# PowerShell Event Log Querying & Triage Guide - Day 12
+# PowerShell Event Log Querying & Triage Guide
 
-## Primary Cmdlets
-* `Get-WinEvent`: Modern, high-performance cmdlet for querying local and remote Windows event logs via structured filters.
-* `Get-EventLog`: Legacy cmdlet (deprecated in PowerShell Core/7+), limited to standard classic logs.
+## 1. What PowerShell Is
+PowerShell is an object-oriented task automation engine and command-line shell developed by Microsoft. Unlike traditional shells that output raw text, PowerShell processes inputs and outputs as structured .NET objects, making it ideal for event log analysis, script automation, and endpoint triage.
 
-## High-Performance Filtering via `-FilterHashtable`
-Avoid piping `Get-WinEvent` to `Where-Object`. Use `-FilterHashtable` to perform database-level filtering directly within the event log engine:
+## 2. What `Get-WinEvent` Does
+`Get-WinEvent` is a modern, high-performance PowerShell cmdlet used to query classic Windows event logs, ETW (Event Tracing for Windows) logs, and `.evtx` log files from local or remote computers.
 
-```powershell
-# High Performance (Database-level filtering)
-Get-WinEvent -FilterHashtable @{
-    LogName   = 'Security'
-    Id        = 4624
-    StartTime = (Get-Date).AddHours(-24)
-}
+## 3. How `-LogName` Works
+The `-LogName` parameter specifies the target event log channel to query (e.g., `System`, `Application`, `Security`).
+* **Actual Command Used:**
+  ```powershell
+  Get-WinEvent -LogName "System" -MaxEvents 10
