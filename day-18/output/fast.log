@@ -1,0 +1,8 @@
+11/04/2026-19:14:10.557921  [**] [1:1000002:1] DNS Query Detected [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:60749 -> 192.168.100.1:53
+11/04/2026-19:14:39.374348  [**] [1:1000002:1] DNS Query Detected [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:58897 -> 192.168.100.1:53
+11/04/2026-19:14:46.740403  [**] [1:1000002:1] DNS Query Detected [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:36927 -> 192.168.100.1:53
+11/04/2026-19:14:00.217705  [**] [1:1000002:1] DNS Query Detected [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:40648 -> 192.168.100.1:53
+11/04/2026-19:14:10.557921  [**] [1:1000001:1] LOCAL LAB DNS query for example.com [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:60749 -> 192.168.100.1:53
+11/04/2026-19:14:46.740403  [**] [1:1000001:1] LOCAL LAB DNS query for example.com [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:36927 -> 192.168.100.1:53
+11/04/2026-19:14:00.217705  [**] [1:1000001:1] LOCAL LAB DNS query for example.com [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:40648 -> 192.168.100.1:53
+11/04/2026-19:14:39.374348  [**] [1:1000001:1] LOCAL LAB DNS query for example.com [**] [Classification: (null)] [Priority: 3] {UDP} 10.0.2.15:58897 -> 192.168.100.1:53

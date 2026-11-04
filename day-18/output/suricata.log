@@ -1,0 +1,54 @@
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Notice: suricata: This is Suricata version 7.0.10 RELEASE running in USER mode
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: cpu: CPUs/cores online: 4
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: suricata: Setting engine mode to IDS mode by default
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: exception-policy: master exception-policy set to: auto
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: logopenfile: fast output device (regular) initialized: fast.log
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: logopenfile: stats output device (regular) initialized: stats.log
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: detect: 1 rule files processed. 1 rules successfully loaded, 0 rules failed, 0
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: detect: 1 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[6457 - RX#01] 2026-11-04 19:17:31 Info: pcap: Starting file run for pcap/dns-example.pcap
+[6457 - RX#01] 2026-11-04 19:17:31 Info: pcap: pcap file pcap/dns-example.pcap end of file reached (pcap err code 0)
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Notice: suricata: Signal Received.  Stopping engine.
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: suricata: time elapsed 0.034s
+[6457 - RX#01] 2026-11-04 19:17:31 Notice: pcap: read 1 file, 8 packets, 936 bytes
+[6456 - Suricata-Main] 2026-11-04 19:17:31 Info: counters: Alerts: 0
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Notice: suricata: This is Suricata version 7.0.10 RELEASE running in USER mode
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: cpu: CPUs/cores online: 4
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: suricata: Setting engine mode to IDS mode by default
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: exception-policy: master exception-policy set to: auto
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: logopenfile: fast output device (regular) initialized: fast.log
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: logopenfile: stats output device (regular) initialized: stats.log
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: detect: 1 rule files processed. 2 rules successfully loaded, 0 rules failed, 0
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: detect: 2 signatures processed. 2 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[6488 - RX#01] 2026-11-04 19:18:31 Info: pcap: Starting file run for pcap/dns-example.pcap
+[6488 - RX#01] 2026-11-04 19:18:31 Info: pcap: pcap file pcap/dns-example.pcap end of file reached (pcap err code 0)
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Notice: suricata: Signal Received.  Stopping engine.
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: suricata: time elapsed 0.040s
+[6488 - RX#01] 2026-11-04 19:18:31 Notice: pcap: read 1 file, 8 packets, 936 bytes
+[6487 - Suricata-Main] 2026-11-04 19:18:31 Info: counters: Alerts: 4
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Notice: suricata: This is Suricata version 7.0.10 RELEASE running in USER mode
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: cpu: CPUs/cores online: 4
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: suricata: Setting engine mode to IDS mode by default
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: exception-policy: master exception-policy set to: auto
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: logopenfile: fast output device (regular) initialized: fast.log
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: logopenfile: stats output device (regular) initialized: stats.log
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: detect: 2 rule files processed. 1 rules successfully loaded, 0 rules failed, 0
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: detect: 1 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[7102 - RX#01] 2026-11-04 20:48:13 Info: pcap: Starting file run for pcap/dns-example.pcap
+[7102 - RX#01] 2026-11-04 20:48:13 Info: pcap: pcap file pcap/dns-example.pcap end of file reached (pcap err code 0)
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Notice: suricata: Signal Received.  Stopping engine.
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: suricata: time elapsed 0.035s
+[7102 - RX#01] 2026-11-04 20:48:13 Notice: pcap: read 1 file, 8 packets, 936 bytes
+[7101 - Suricata-Main] 2026-11-04 20:48:13 Info: counters: Alerts: 4
