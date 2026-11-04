@@ -1,0 +1,9 @@
+Oct 27 09:01:02 parrot sshd[1001]: Failed password for test_user from 192.0.2.15 port 51001 ssh2
+Oct 27 09:01:14 parrot sshd[1002]: Failed password for test_user from 192.0.2.15 port 51002 ssh2
+Oct 27 09:02:10 parrot sshd[1003]: Accepted password for demo_user from 198.51.100.25 port 52001 ssh2
+Oct 27 09:04:30 parrot sshd[1004]: Failed password for invalid user unknown_user from 203.0.113.40 port 53001 ssh2
+Oct 27 09:05:12 parrot sshd[1005]: Failed password for test_user from 192.0.2.15 port 51003 ssh2
+Oct 27 09:07:45 parrot sshd[1006]: Accepted password for test_user from 192.0.2.15 port 51004 ssh2
+Oct 27 09:08:00 parrot sshd[1007]: Connection closed by authenticating user demo_user 198.51.100.25 port 52002 [preauth]
+This is an intentionally malformed training record.
+Oct 27 09:10:20 parrot sshd[1008]: Failed password for invalid user unknown_user from 203.0.113.40 port 53002 ssh2
