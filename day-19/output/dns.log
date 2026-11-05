@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2026-11-05-11-27-31
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected	opcode	opcode_name
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool	count	string
+1793819640.217705	CT7zQ13GzyoEod5x32	10.0.2.15	40648	192.168.100.1	53	udp	52822	0.054925	example.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	104.20.23.154,172.66.147.243	68.000000,68.000000	F	0	query
+1793819650.557921	C5UUsZ1yV6CSLBFdj2	10.0.2.15	60749	192.168.100.1	53	udp	56032	0.015982	example.com	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	2606:4700:10::6814:179a,2606:4700:10::ac42:93f3	178.000000,178.000000	F	0	query
+1793819679.374348	C3KkJFv3n3kzdWHL2	10.0.2.15	58897	192.168.100.1	53	udp	7776	0.007859	example.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	172.66.147.243,104.20.23.154	29.000000,29.000000	F	0	query
+1793819686.740403	CFiG1uZYkcWpLAVel	10.0.2.15	36927	192.168.100.1	53	udp	45383	0.004819	example.com	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	2606:4700:10::ac42:93f3,2606:4700:10::6814:179a	141.000000,141.000000	F	0	query
+#close	2026-11-05-11-27-31
