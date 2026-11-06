@@ -1,0 +1,21 @@
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Notice: suricata: This is Suricata version 7.0.10 RELEASE running in USER mode
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: cpu: CPUs/cores online: 4
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: suricata: Setting engine mode to IDS mode by default
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: exception-policy: master exception-policy set to: auto
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: logopenfile: fast output device (regular) initialized: fast.log
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: logopenfile: stats output device (regular) initialized: stats.log
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Warning: detect: 1 rule files specified, but no rules were loaded!
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: detect: 0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Warning: unix-manager: Unix socket: UNIX socket bind(/var/run/suricata-command.socket) error: Address already in use
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Warning: unix-manager: Unable to create unix command socket
+[2817 - RX#01] 2026-11-06 16:47:06 Info: pcap: Starting file run for /home/user/cybersecurity-journey/day-20/pcap/day20.pcap
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[2817 - RX#01] 2026-11-06 16:47:06 Info: pcap: pcap file /home/user/cybersecurity-journey/day-20/pcap/day20.pcap end of file reached (pcap err code 0)
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Notice: suricata: Signal Received.  Stopping engine.
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: suricata: time elapsed 0.047s
+[2817 - RX#01] 2026-11-06 16:47:06 Warning: pcap: 1/3th of packets have an invalid checksum, consider setting pcap-file.checksum-checks variable to no or use '-k none' option on command line.
+[2817 - RX#01] 2026-11-06 16:47:06 Notice: pcap: read 1 file, 60 packets, 12742 bytes
+[2816 - Suricata-Main] 2026-11-06 16:47:06 Info: counters: Alerts: 0
