@@ -19,3 +19,36 @@
 [2817 - RX#01] 2026-11-06 16:47:06 Warning: pcap: 1/3th of packets have an invalid checksum, consider setting pcap-file.checksum-checks variable to no or use '-k none' option on command line.
 [2817 - RX#01] 2026-11-06 16:47:06 Notice: pcap: read 1 file, 60 packets, 12742 bytes
 [2816 - Suricata-Main] 2026-11-06 16:47:06 Info: counters: Alerts: 0
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Notice: suricata: This is Suricata version 7.0.10 RELEASE running in SYSTEM mode
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: cpu: CPUs/cores online: 4
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: suricata: Running suricata under test mode
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: suricata: Setting engine mode to IDS mode by default
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: exception-policy: master exception-policy set to: auto
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: logopenfile: fast output device (regular) initialized: fast.log
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: logopenfile: stats output device (regular) initialized: stats.log
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: detect: 1 rule files processed. 1 rules successfully loaded, 0 rules failed, 0
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Info: detect: 1 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[2998 - Suricata-Main] 2026-11-06 16:56:04 Notice: suricata: Configuration provided was successfully loaded. Exiting.
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Notice: suricata: This is Suricata version 7.0.10 RELEASE running in USER mode
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: cpu: CPUs/cores online: 4
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: suricata: Setting engine mode to IDS mode by default
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: exception-policy: master exception-policy set to: auto
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: logopenfile: fast output device (regular) initialized: fast.log
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: logopenfile: stats output device (regular) initialized: stats.log
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: detect: 1 rule files processed. 1 rules successfully loaded, 0 rules failed, 0
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: detect: 1 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Warning: unix-manager: Unix socket: UNIX socket bind(/var/run/suricata-command.socket) error: Address already in use
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Warning: unix-manager: Unable to create unix command socket
+[3200 - RX#01] 2026-11-06 17:25:30 Info: pcap: Starting file run for pcap/day20.pcap
+[3200 - RX#01] 2026-11-06 17:25:30 Info: pcap: pcap file pcap/day20.pcap end of file reached (pcap err code 0)
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Notice: suricata: Signal Received.  Stopping engine.
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: suricata: time elapsed 0.037s
+[3200 - RX#01] 2026-11-06 17:25:30 Warning: pcap: 1/3th of packets have an invalid checksum, consider setting pcap-file.checksum-checks variable to no or use '-k none' option on command line.
+[3200 - RX#01] 2026-11-06 17:25:30 Notice: pcap: read 1 file, 60 packets, 12742 bytes
+[3199 - Suricata-Main] 2026-11-06 17:25:30 Info: counters: Alerts: 4
