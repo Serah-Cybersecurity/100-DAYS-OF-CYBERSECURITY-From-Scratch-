@@ -1,0 +1,2 @@
+# Day 21 Mini-SIEM Ingestion Pipeline
+# Engineering Note: Uses Python standard library only (no external dependencies required).

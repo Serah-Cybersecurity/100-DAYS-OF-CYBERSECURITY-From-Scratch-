@@ -1,0 +1,2 @@
+{"timestamp": "2026-11-06T08:03:00Z", "source": "suricata", "event_type": "alert", "signature": "Example test alert", "source_ip": "192.0.2.25", "destination_ip": "198.51.100.20", "severity": 2}
+{"timestamp": "2026-11-06T08:08:00Z", "source": "suricata", "event_type": "alert", "signature": "Malware C2 Beacon Detected", "source_ip": "192.0.2.88", "destination_ip": "203.0.113.100", "severity": 1}

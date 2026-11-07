@@ -1,0 +1,30 @@
+[
+  {
+    "ip": "192.0.2.25",
+    "hostname": "workstation-01",
+    "asset_type": "workstation",
+    "department": "finance",
+    "criticality": "medium"
+  },
+  {
+    "ip": "198.51.100.20",
+    "hostname": "test-web-server",
+    "asset_type": "server",
+    "department": "engineering",
+    "criticality": "high"
+  },
+  {
+    "ip": "192.0.2.10",
+    "hostname": "dc-01",
+    "asset_type": "domain_controller",
+    "department": "it_infrastructure",
+    "criticality": "critical"
+  },
+  {
+    "ip": "192.0.2.50",
+    "hostname": "dev-box-02",
+    "asset_type": "workstation",
+    "department": "engineering",
+    "criticality": "low"
+  }
+]

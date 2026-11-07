@@ -1,0 +1,19 @@
+{
+  "run_id": "day21-run-20261107165233",
+  "execution_timestamp": "2026-11-07T16:52:33.371288+00:00",
+  "input_files": 4,
+  "records_received": 12,
+  "records_parsed": 11,
+  "records_valid": 9,
+  "records_rejected": 3,
+  "records_duplicated": 1,
+  "records_written": 8,
+  "ingestion_success_rate_percent": 75.0,
+  "pipeline_status": "COMPLETED WITH DATA QUALITY WARNINGS",
+  "sources": {
+    "windows": 3,
+    "linux": 3,
+    "firewall": 3,
+    "suricata": 2
+  }
+}

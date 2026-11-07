@@ -1,0 +1,3 @@
+{"timestamp": "2026-11-06T08:02:00Z", "source": "firewall", "action": "blocked", "source_ip": "192.0.2.25", "destination_ip": "198.51.100.20", "destination_port": 443, "protocol": "TCP"}
+{"timestamp": "2026-11-06T08:07:00Z", "source": "firewall", "action": "allowed", "source_ip": "192.0.2.50", "destination_ip": "198.51.100.50", "destination_port": 80, "protocol": "TCP"}
+{"timestamp": "2026-11-06T08:12:00Z", "source": "firewall", "action": "blocked", "source_ip": "192.0.2.25", "destination_ip": "198.51.100.20", "destination_port": 70000, "protocol": "TCP"}

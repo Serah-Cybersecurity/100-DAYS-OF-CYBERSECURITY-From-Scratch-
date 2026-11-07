@@ -1,0 +1,4 @@
+{"timestamp": "2026-11-06T08:00:00Z", "source": "windows", "event_id": 4625, "username": "alex", "source_ip": "192.0.2.25", "hostname": "workstation-01"}
+{"timestamp": "2026-11-06T08:05:00Z", "source": "windows", "event_id": 4624, "username": "admin", "source_ip": "192.0.2.10", "hostname": "dc-01"}
+{"timestamp": "2026-11-06T08:10:00Z", "source": "windows", "event_id": 4625, "username": "alex", "source_ip": "999.999.999.999", "hostname": "workstation-01"}
+MALFORMED_JSON_STRING_TRIGGER_PARSER_ERROR_1
