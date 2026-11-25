@@ -1,3 +1,4 @@
+import argparse
 from collections import Counter
 from datetime import datetime, timezone
 import json
@@ -7,11 +8,14 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-INPUT_FILE = PROJECT_ROOT / "data" / "raw" / "endpoint_events.jsonl"
-REPORT_FILE = PROJECT_ROOT / "reports" / "endpoint_summary.json"
-QUARANTINE_FILE = PROJECT_ROOT / "data" / "quarantine" / "invalid_events.jsonl"
+DEFAULT_INPUT_FILE = PROJECT_ROOT / "data" / "raw" / "endpoint_events.jsonl"
+DEFAULT_REPORT_FILE = PROJECT_ROOT / "reports" / "endpoint_summary.json"
+DEFAULT_QUARANTINE_FILE = PROJECT_ROOT / "data" / "quarantine" / "invalid_events.jsonl"
 
 REQUIRED_FIELDS = ("timestamp", "host", "channel", "event_id")
+LOGON_EVENT_IDS = {4624, 4625}
+PROCESS_NETWORK_EVENT_IDS = {1, 3, 4688}
+AUDIT_CLEARED_EVENT_ID = 1102
 
 logging.basicConfig(
     level=logging.INFO,
@@ -19,17 +23,24 @@ logging.basicConfig(
 )
 
 
-def _is_valid_iso_timestamp(value: Any) -> bool:
+def parse_iso_timestamp(value: Any) -> datetime | None:
+    """Parse an ISO-8601 timestamp into a timezone-aware datetime, or None."""
     if not isinstance(value, str) or not value.strip():
-        return False
+        return None
     normalized = value.strip()
     if normalized.endswith("Z"):
         normalized = normalized[:-1] + "+00:00"
     try:
-        datetime.fromisoformat(normalized)
-        return True
+        dt = datetime.fromisoformat(normalized)
     except ValueError:
-        return False
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
+def _is_valid_iso_timestamp(value: Any) -> bool:
+    return parse_iso_timestamp(value) is not None
 
 
 def validate_event(event: Any) -> str | None:
@@ -53,8 +64,30 @@ def validate_event(event: Any) -> str | None:
     return None
 
 
+def _slim_event_for_timeline(event: dict[str, Any]) -> dict[str, Any]:
+    """Keep core and contextual fields present on the event without fabricating values."""
+    optional_keys = (
+        "username",
+        "source_ip",
+        "process_name",
+        "parent_process",
+        "destination_ip",
+        "message",
+    )
+    entry: dict[str, Any] = {
+        "timestamp": event["timestamp"],
+        "host": event["host"],
+        "channel": event["channel"],
+        "event_id": event["event_id"],
+    }
+    for key in optional_keys:
+        if key in event and event[key] is not None:
+            entry[key] = event[key]
+    return entry
+
+
 def analyse_events(input_path: Path) -> dict[str, Any]:
-    valid_records = 0
+    valid_entries: list[tuple[datetime, int, dict[str, Any]]] = []
     invalid_records: list[dict[str, Any]] = []
     event_counts: Counter[str] = Counter()
     successful_logons = 0
@@ -85,7 +118,9 @@ def analyse_events(input_path: Path) -> dict[str, Any]:
                 })
                 continue
 
-            valid_records += 1
+            parsed_dt = parse_iso_timestamp(event["timestamp"])
+            assert parsed_dt is not None
+
             event_id = event["event_id"]
             event_counts[str(event_id)] += 1
 
@@ -94,36 +129,82 @@ def analyse_events(input_path: Path) -> dict[str, Any]:
             elif event_id == 4625:
                 failed_logons += 1
 
+            valid_entries.append((parsed_dt, line_number, _slim_event_for_timeline(event)))
+
+    valid_entries.sort(key=lambda item: (item[0], item[1]))
+    timeline = [item[2] for item in valid_entries]
+    logon_sequence = [ev for ev in timeline if ev["event_id"] in LOGON_EVENT_IDS]
+    process_and_network_events = [
+        ev for ev in timeline if ev["event_id"] in PROCESS_NETWORK_EVENT_IDS
+    ]
+    audit_log_cleared_events = [
+        ev for ev in timeline if ev["event_id"] == AUDIT_CLEARED_EVENT_ID
+    ]
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "input_file": input_path.name,
-        "total_valid_records": valid_records,
+        "total_valid_records": len(timeline),
         "total_invalid_records": len(invalid_records),
         "event_id_counts": dict(event_counts),
         "successful_logons": successful_logons,
         "failed_logons": failed_logons,
+        "timeline": timeline,
+        "logon_sequence": logon_sequence,
+        "process_and_network_events": process_and_network_events,
+        "audit_log_cleared_events": audit_log_cleared_events,
         "invalid_records": invalid_records,
     }
 
 
-def main() -> None:
-    if not INPUT_FILE.exists():
-        raise FileNotFoundError(f"Input file not found: {INPUT_FILE}")
+def build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Validate, sort, and summarize JSONL endpoint telemetry."
+    )
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=DEFAULT_INPUT_FILE,
+        help="Path to input JSONL event file",
+    )
+    parser.add_argument(
+        "--output-report",
+        type=Path,
+        default=DEFAULT_REPORT_FILE,
+        help="Path to output JSON summary report",
+    )
+    parser.add_argument(
+        "--quarantine-file",
+        type=Path,
+        default=DEFAULT_QUARANTINE_FILE,
+        help="Path to output JSONL file for invalid/malformed records",
+    )
+    return parser
 
-    REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    QUARANTINE_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    report = analyse_events(INPUT_FILE)
-    REPORT_FILE.write_text(json.dumps(report, indent=2), encoding="utf-8")
+def main(argv: list[str] | None = None) -> None:
+    args = build_arg_parser().parse_args(argv)
+    input_path: Path = args.input
+    report_path: Path = args.output_report
+    quarantine_path: Path = args.quarantine_file
 
-    with QUARANTINE_FILE.open("w", encoding="utf-8") as file:
+    if not input_path.exists():
+        raise FileNotFoundError(f"Input file not found: {input_path}")
+
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    quarantine_path.parent.mkdir(parents=True, exist_ok=True)
+
+    report = analyse_events(input_path)
+    report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
+
+    with quarantine_path.open("w", encoding="utf-8") as file:
         for record in report["invalid_records"]:
             file.write(json.dumps(record) + "\n")
 
     logging.info("Analysis complete")
     logging.info("Valid records: %s", report["total_valid_records"])
     logging.info("Invalid records: %s", report["total_invalid_records"])
-    logging.info("Report: %s", REPORT_FILE)
+    logging.info("Report: %s", report_path)
 
 
 if __name__ == "__main__":

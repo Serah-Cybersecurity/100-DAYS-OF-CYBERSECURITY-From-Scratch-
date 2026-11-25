@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-11-25T21:18:21.519552+00:00",
+  "input_file": "ws_fin_04_events.jsonl",
+  "total_valid_records": 6,
+  "total_invalid_records": 0,
+  "event_id_counts": {
+    "4625": 2,
+    "4624": 1,
+    "1": 1,
+    "3": 1,
+    "1102": 1
+  },
+  "successful_logons": 1,
+  "failed_logons": 2,
+  "timeline": [
+    {
+      "timestamp": "2026-11-25T09:01:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 4625,
+      "username": "user_a",
+      "source_ip": "203.0.113.45",
+      "message": "Failed logon"
+    },
+    {
+      "timestamp": "2026-11-25T09:02:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 4625,
+      "username": "user_a",
+      "source_ip": "203.0.113.45",
+      "message": "Failed logon"
+    },
+    {
+      "timestamp": "2026-11-25T09:03:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 4624,
+      "username": "user_a",
+      "source_ip": "203.0.113.45",
+      "message": "Successful logon"
+    },
+    {
+      "timestamp": "2026-11-25T09:04:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Sysmon",
+      "event_id": 1,
+      "username": "user_a",
+      "process_name": "sample.exe",
+      "parent_process": "explorer.exe",
+      "message": "Sysmon process creation"
+    },
+    {
+      "timestamp": "2026-11-25T09:05:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Sysmon",
+      "event_id": 3,
+      "username": "user_a",
+      "process_name": "sample.exe",
+      "destination_ip": "198.51.100.70",
+      "message": "Synthetic network connection"
+    },
+    {
+      "timestamp": "2026-11-25T09:10:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 1102,
+      "username": "user_a",
+      "message": "Audit log cleared"
+    }
+  ],
+  "logon_sequence": [
+    {
+      "timestamp": "2026-11-25T09:01:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 4625,
+      "username": "user_a",
+      "source_ip": "203.0.113.45",
+      "message": "Failed logon"
+    },
+    {
+      "timestamp": "2026-11-25T09:02:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 4625,
+      "username": "user_a",
+      "source_ip": "203.0.113.45",
+      "message": "Failed logon"
+    },
+    {
+      "timestamp": "2026-11-25T09:03:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 4624,
+      "username": "user_a",
+      "source_ip": "203.0.113.45",
+      "message": "Successful logon"
+    }
+  ],
+  "process_and_network_events": [
+    {
+      "timestamp": "2026-11-25T09:04:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Sysmon",
+      "event_id": 1,
+      "username": "user_a",
+      "process_name": "sample.exe",
+      "parent_process": "explorer.exe",
+      "message": "Sysmon process creation"
+    },
+    {
+      "timestamp": "2026-11-25T09:05:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Sysmon",
+      "event_id": 3,
+      "username": "user_a",
+      "process_name": "sample.exe",
+      "destination_ip": "198.51.100.70",
+      "message": "Synthetic network connection"
+    }
+  ],
+  "audit_log_cleared_events": [
+    {
+      "timestamp": "2026-11-25T09:10:00Z",
+      "host": "WS-FIN-04",
+      "channel": "Security",
+      "event_id": 1102,
+      "username": "user_a",
+      "message": "Audit log cleared"
+    }
+  ],
+  "invalid_records": []
+}
