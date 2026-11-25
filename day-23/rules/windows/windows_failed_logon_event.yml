@@ -1,0 +1,20 @@
+title: Windows Failed Logon Event Observed
+id: f5347a96-10c0-45f1-a984-b527db7ae9d9
+status: experimental
+description: Identifies Windows Security events associated with failed logon attempts. Repeated events should be reviewed alongside successful authentication records and relevant account context.
+references:
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625
+author: Serah-Cybersecurity
+date: 2026-11-08
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4625
+    condition: selection
+falsepositives:
+    - Legitimate users entering incorrect credentials.
+    - Automated services using expired credentials.
+    - Misconfigured authentication applications.
+level: low

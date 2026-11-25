@@ -1,0 +1,5 @@
+{"EventID":4625,"EventType":"Authentication","AccountName":"analyst01","Computer":"workstation01","Outcome":"Failure"}
+{"EventID":4625,"EventType":"Authentication","AccountName":"analyst02","Computer":"workstation02","Outcome":"Failure"}
+{"EventID":4624,"EventType":"Authentication","AccountName":"analyst01","Computer":"workstation01","Outcome":"Success"}
+{"EventID":4740,"EventType":"AccountManagement","AccountName":"analyst03","Computer":"workstation03","Outcome":"AccountLocked"}
+{"EventID":4624,"EventType":"Authentication","AccountName":"analyst04","Computer":"workstation04","Outcome":"Success"}

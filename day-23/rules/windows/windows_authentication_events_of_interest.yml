@@ -1,0 +1,18 @@
+title: Windows Authentication Events of Interest
+id: c528c8d9-782b-46cb-9800-ba5042d55ce0
+status: experimental
+description: Identifies selected Windows authentication events for further analysis.
+author: Serah-Cybersecurity
+date: 2026-11-08
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID:
+      - 4624
+      - 4625
+  condition: selection
+falsepositives:
+  - Normal authentication activity.
+level: informational

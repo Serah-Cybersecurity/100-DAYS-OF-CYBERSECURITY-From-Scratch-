@@ -1,0 +1,20 @@
+title: Windows Account Lockout Event Observed
+id: 8a365057-89cc-457c-b1d6-fb08df7dc6be
+status: experimental
+description: Identifies Windows Security account lockout events. Analysts should review the affected account, surrounding authentication activity and legitimate operational explanations.
+references:
+  - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4740
+author: Serah-Cybersecurity
+date: 2026-11-08
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4740
+  condition: selection
+falsepositives:
+  - Users repeatedly entering incorrect credentials.
+  - Applications using outdated stored credentials.
+  - Legitimate account management activity.
+level: medium
