@@ -1,0 +1,7 @@
+{"timestamp":"2026-11-25T08:10:00Z","host":"WS-TEST-01","channel":"Security","event_id":4624,"username":"analyst","source_ip":"192.0.2.10","message":"Successful logon"}
+{"timestamp":"2026-11-25T08:11:00Z","host":"WS-TEST-01","channel":"Security","event_id":4625,"username":"analyst","source_ip":"192.0.2.10","message":"Failed logon"}
+{"timestamp":"2026-11-25T08:11:30Z","host":"WS-TEST-01","channel":"Security","event_id":4625,"username":"analyst","source_ip":"192.0.2.10","message":"Failed logon"}
+{"timestamp":"2026-11-25T08:15:00Z","host":"WS-TEST-01","channel":"Security","event_id":4688,"username":"analyst","process_name":"example.exe","parent_process":"explorer.exe","message":"Process created"}
+{"timestamp":"2026-11-25T08:17:00Z","host":"WS-TEST-01","channel":"Sysmon","event_id":1,"username":"analyst","process_name":"example.exe","parent_process":"explorer.exe","message":"Sysmon process creation"}
+{"timestamp":"2026-11-25T08:20:00Z","host":"WS-TEST-01","channel":"Sysmon","event_id":3,"username":"analyst","process_name":"example.exe","destination_ip":"198.51.100.20","message":"Synthetic network connection"}
+{"timestamp":"2026-11-25T08:25:00Z","host":"WS-TEST-01","channel":"Security","event_id":1102,"username":"analyst","message":"Audit log cleared"}

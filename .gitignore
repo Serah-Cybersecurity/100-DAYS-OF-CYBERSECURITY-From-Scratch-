@@ -6,3 +6,8 @@
 *.html
 *.download
 *_files/
+
+# Day 24 virtual environment & local Windows telemetry exports
+.venv/
+**/security-events.csv
+**/security-events.json
