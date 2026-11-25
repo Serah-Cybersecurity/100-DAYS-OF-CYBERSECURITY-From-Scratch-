@@ -30,3 +30,4 @@ python src/analyse_events.py \
 
 # Run automated tests
 python -m unittest discover -s tests -v
+```
