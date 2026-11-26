@@ -15,3 +15,22 @@
 # Python bytecode cache
 __pycache__/
 *.py[cod]
+
+# Virtual environments & Python cache
+.venv/
+__pycache__/
+*.pyc
+*.py[cod]
+
+# Environment & local secrets
+.env
+
+# Raw Windows event & trace files
+*.evtx
+*.etl
+
+# Private directories & local exports
+private_data/
+real_endpoint_logs/
+**/security-events.csv
+**/security-events.json
