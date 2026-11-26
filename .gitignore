@@ -11,3 +11,7 @@
 .venv/
 **/security-events.csv
 **/security-events.json
+
+# Python bytecode cache
+__pycache__/
+*.py[cod]
