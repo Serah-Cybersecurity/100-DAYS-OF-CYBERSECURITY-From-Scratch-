@@ -1,0 +1,3 @@
+{"timestamp":"2026-11-25T09:05:00Z","host":"WS-FIN-04","channel":"Sysmon","event_id":3,"username":"user_a","process_name":"sample.exe","destination_ip":"198.51.100.70"}
+{"timestamp":"2026-11-25T09:01:00Z","host":"WS-FIN-04","channel":"Security","event_id":4625,"username":"user_a","source_ip":"203.0.113.45"}
+{"timestamp":"2026-11-25T09:03:00Z","host":"WS-FIN-04","channel":"Security","event_id":4624,"username":"user_a","source_ip":"203.0.113.45"}

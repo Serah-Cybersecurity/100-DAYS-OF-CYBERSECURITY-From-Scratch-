@@ -141,5 +141,19 @@ class TestEventValidationAndAnalysis(unittest.TestCase):
             )
 
 
+
+    def test_fixture_out_of_order_file_sorts_chronologically(self):
+        fixture_path = Path(__file__).resolve().parent / "fixtures" / "out_of_order_events.jsonl"
+        summary = analyse_events(fixture_path)
+        self.assertEqual(
+            [ev["timestamp"] for ev in summary["timeline"]],
+            [
+                "2026-11-25T09:01:00Z",
+                "2026-11-25T09:03:00Z",
+                "2026-11-25T09:05:00Z",
+            ],
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
